@@ -1,4 +1,9 @@
 document.querySelector('button').addEventListener('click', apiRequest)
+document.querySelector('input').addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+        apiRequest()
+    }
+})
 
 async function apiRequest() {
     const playerName = document.querySelector('input').value
